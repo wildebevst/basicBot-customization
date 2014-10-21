@@ -93,7 +93,7 @@
         themeLink: "http://lushselects.tumblr.com/genres",
         fbLink: "https://www.facebook.com/lushselects",
         youtubeLink: "http://goo.gl/jXXTbW",
-        website: "http://lushselects.tumblr.com",
+        website: "Check us out: http://lushselects.tumblr.com | https://www.facebook.com/lushselects | https://www.youtube.com/user/lushselects | https://twitter.com/LushSelects |",
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
