@@ -152,8 +152,8 @@
             
                 ],
                 getdrink: function () {
-                    var c = Math.floor(Math.random() * this.drinks.length);
-                    return this.drinks[c];
+                    var c = Math.floor(Math.random() * this.drink.length);
+                    return this.drink[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -163,7 +163,7 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatdrink);
+                            API.sendChat(basicBot.chat.drinksdrink);
                             return false;
                         }
                         else {
