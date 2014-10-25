@@ -111,8 +111,16 @@
                 cookies: ['has given you a chocolate chip cookie!',
                     'has given you a Bloody Mary',
                     'has given you an Irish Coffee',
-                    'has given you an Whiskey Sour',
-                    'has given you an Whiskey Sour',
+                    'has given you a Whiskey Sour',
+                    'has given you a Gin Rickey',
+                    'has given you a Cherry Hooker',
+                    'has given you an Alabama Slammer',
+                    'has given you a Sidecar',
+                    'has given you a Martini',
+                    'has given you a Cosmopolitan',
+                    'has given you a Boulevardier',
+                    'has given you a Boulevardier',
+                    
             
                 ],
                 getCookie: function () {
