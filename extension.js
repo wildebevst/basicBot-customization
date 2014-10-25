@@ -104,7 +104,7 @@
         }
     }));
     
-    cookieCommand: {
+    drinkCommand: {
                 command: 'drink',
                 rank: 'user',
                 type: 'startsWith',
@@ -151,7 +151,7 @@
                     'has given you a Wine Spritzer',
             
                 ],
-                getCookie: function () {
+                getdrink: function () {
                     var c = Math.floor(Math.random() * this.drinks.length);
                     return this.drinks[c];
                 },
