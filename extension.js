@@ -108,7 +108,7 @@
                 command: 'drink',
                 rank: 'user',
                 type: 'startsWith',
-                cookies: ['has given you a chocolate chip cookie!',
+                cookies: ['has given you a Strawberry Daiquiri',
                     'has given you a Bloody Mary',
                     'has given you an Irish Coffee',
                     'has given you a Whiskey Sour',
@@ -116,16 +116,44 @@
                     'has given you a Cherry Hooker',
                     'has given you an Alabama Slammer',
                     'has given you a Sidecar',
-                    'has given you a Martini',
+                    'has given you an Apple Martini',
                     'has given you a Cosmopolitan',
                     'has given you a Boulevardier',
-                    'has given you a Boulevardier',
-                    
+                    'has given you a Tequila Sunrise',
+                    'has given you a Vodka Red Bull',
+                    'has given you a Rum & Coke',
+                    'has given you a Brave Bull',
+                    'has given you a Black Russian',
+                    'has given you a Horny Bull',
+                    'has given you a Colorado Bulldog',
+                    'has given you a White Russian',
+                    'has given you a Washington Apple',
+                    'has given you a Vodka Martini-',
+                    'has given you a Vodka Tonic',
+                    'has given you a Bacardi Cocktail',
+                    'has given you a Sex on the Beach',
+                    'has given you a Lynchburg Lemonade',
+                    'has given you a Pink Squirrel',
+                    'has given you a Vodka Tonic',
+                    'has given you a Buttery Nipple',
+                    'has given you a Jell-O Shot',
+                    'has given you a Jäger Bomb',
+                    'has given you a Blow Job',
+                    'has given you a Piña Colada',
+                    'has given you a Blue Hawaiian',
+                    'has given you a Flaming Dr. Pepper',
+                    'has given you a Liquid Cocaine',
+                    'has given you a Redheaded Slut',
+                    'has given you a Tequila Shot ',
+                    'has given you a Hot Buttered Rum',
+                    'has given you a Three Wise Men',
+                    'has given you a Tomahawk',
+                    'has given you a Wine Spritzer',
             
                 ],
                 getCookie: function () {
-                    var c = Math.floor(Math.random() * this.cookies.length);
-                    return this.cookies[c];
+                    var c = Math.floor(Math.random() * this.drinks.length);
+                    return this.drinks[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
