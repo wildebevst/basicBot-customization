@@ -103,6 +103,50 @@
             OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
+    
+    cookieCommand: {
+                command: 'drink',
+                rank: 'user',
+                type: 'startsWith',
+                cookies: ['has given you a chocolate chip cookie!',
+                    'has given you a Bloody Mary',
+                    'has given you an Irish Coffee',
+                    'has given you an Whiskey Sour',
+                    'has given you an Whiskey Sour',
+            
+                ],
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(basicBot.chat.eatdrink);
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = basicBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(basicBot.chat.nouserdrink, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(basicBot.chat.selfdrink, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(basicBot.chat.drink, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
+                            }
+                        }
+                    }
+                }
+            },
+
 
     //Start the bot and extend it when it has loaded.
     $.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js', extend);
